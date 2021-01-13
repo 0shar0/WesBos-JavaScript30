@@ -4,12 +4,12 @@ function play(e) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.play();
-  key.classList.add("plaing");
+  key.classList.add("playing");
 }
 
 function remove(e) {
   if (e.propertyName != "transform") return;
-  this.classList.remove("plaing");
+  this.classList.remove("playing");
 }
 
 const keys = document.querySelectorAll(".key");
