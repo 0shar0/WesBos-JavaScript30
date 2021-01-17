@@ -17,15 +17,17 @@ function displayMatches() {
   const matchArray = findMatches(this.value, cities);
   const html = matchArray.map(place => {
     const regex = new RegExp(this.value, 'gi')
-    const cityName = place.city.replace(regex, `<span class='hl'>${this.value}</span>`)
     return`
-    <li>
-      <span class='name'>${cityName}, ${place.state}</span>
+    <li class='li'>
+      <span class='name'>${place.city}, ${place.state}</span>
       <span class='population'>${place.population}</span>
     </li>
     `;
   }).join('')
   suggestion.innerHTML = html
+  if (searchInput.value == '') {
+    suggestion.innerHTML = ` <li class="filter">Filter of a City</li>`;
+  }
 }
 
 const searchInput = document.querySelector('.search')

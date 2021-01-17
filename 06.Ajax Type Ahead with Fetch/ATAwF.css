@@ -1,0 +1,30 @@
+body{
+  background-color: orange;
+  text-align: center;
+}
+
+.search{
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.search-form{
+  align-items: center;
+}
+.suggestions{
+  list-style-type: none;
+}
+
+li{
+  border-style: solid;
+  background-color: aquamarine;
+  margin: 2px;
+  min-height: 30px;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li.filter{
+  text-align: center;
+}
